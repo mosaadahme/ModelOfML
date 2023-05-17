@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- mobile metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- site metas -->
+        <title>moon firm</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/bootstrap.min.css')}}">
+        <!-- style css -->
+        <link rel="stylesheet"  type="text/css" href=" {{url_for ('static',filename = 'css/style.css')}}">
+        <!-- Responsive-->
+        <link rel="stylesheet" type="text/css" href="{{url_for ('static',filename = 'css/responsive.css')}}">
+        <!-- fevicon -->
+        <link rel="icon" href="images/logo.png" type="image/gif" />
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="{{url_for ('static',filename = 'css/jquery.mCustomScrollbar.min.css')}}">
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <!-- [if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    </head>
+<body>
+    <div id="contact" class="contact mt-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>Get In <strong class="black"> Touch</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padddd">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 padddd">
+            <div class="map_section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                            <form class="main_form mb-5" method="POST" action="{{ url_for('result')}}">
+                                <div class="row">
+
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Nitrogen" type="text" name="nitrogen">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="potassium"  name="potassium">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Calcium" type="text" name="kpo">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Temprature" type="'text" name="temprature">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Humidity"  name="hd">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="PH"  name="ph">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input class="form-control" placeholder="Rainfull"  name="rain">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <input name="sub" class="submit1" type="submit" id="send" value="Submit">
+                                        <!-- <a class="send" href='/result' type="submit"> Send</a> -->
+                                    </div>
+                                </div>
+                            </form>
+                            <script>
+                                let sm = document.getElementById('send');
+                                sm.onclick = function(){
+                                    sm.style.backgroundColor = "gray";
+                                    setTimeout(function(){
+                                        sm.style.backgroundColor = "rgb(31, 109, 135)";
+                                    }, 5000)
+                                }
+                            </script>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <img src="{{ url_for('static', filename='images/f3.jpg') }}" class="image-fluid mt-5 ml-5">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="map">
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

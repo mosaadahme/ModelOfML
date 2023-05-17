@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- mobile metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- site metas -->
+        <title>moon firm</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <!-- style css -->
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <!-- Responsive-->
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}">
+        <!-- fevicon -->
+        <link rel="icon" href="images/fevicon.png" type="image/gif" />
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    </head>
+<body>
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_box">
+                        <h2><br><strong class="black">Recommendations</strong></h2>
+                        <p> According to soil features Your land is suitable for growing ..</p>
+                        {% if label[0].lower() == 'rice' %}
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'coffee' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'maize' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'jute' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'cotton' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'coconut' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'papaya' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'orange' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'apple' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'muskmelon' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'watermelon' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'grapes' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'mango' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'banana' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'pomegranate' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'lentil' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'blackgram' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'mungbean' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'mothbeans' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'pigeonpeas' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'kidneybeans' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% elif label[0].lower() == 'chickpea' %} 
+                        <h2>{{label[0].capitalize()}}</h2>
+                        {% endif %}
+                        
+                        <p>With accuracy 0.98</p>
+
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_img">
+                        {% if label[0].lower() == 'rice' %}
+                        <figure><img src="{{url_for ('static', filename = 'images/Rice-PNG-Photos (1).png')}}" alt="img" /></figure>  
+                        {% elif label[0].lower() == 'coffee' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/coffee.jpg')}}" alt="img" weidth=100%; /></figure>
+                         {% elif label[0].lower() == 'maize' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/maize.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'jute' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/jute.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'cotton' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/Cotton.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'coconut' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/coconut.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'papaya' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/papaya.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'orange' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/orange.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'apple' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/apple.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'muskmelon' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/muskmelon.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'watermelon' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/watermelon.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'grapes' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/grapes.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'mango' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/mango.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'banana' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/banana.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'pomegranate' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/pomegranate88888888888888888888888888888.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'lentil' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/lentil.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'blackgram' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/blackgram.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'mungbean' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/mungbean.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'mothbeans' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/mothbeans.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'pigeonpeas' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/pigeonpeas.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'kidneybeans' %} 
+                        <figure><img src="{{url_for ('static', filename = 'images/kidneybeans.png')}}" alt="img" weidth=100%; /></figure>
+                        {% elif label[0].lower() == 'chickpea' %} 
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
